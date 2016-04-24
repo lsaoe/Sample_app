@@ -9,8 +9,8 @@ port        ENV['PORT']     || 3000
 environment ENV['RACK_ENV'] || 'development'
 
 on_worker_boot do
-    # Rails 4.1+ 专用的职程设置
-  #   # 详情参见：https://devcenter.heroku.com/articles/
-  #     # deploying-rails-applications-with-the-puma-web-server#on-worker-boot
-  #       ActiveRecord::Base.establish_connection
-  #       end
+  # Rails 4.1+ 专用的职程设置
+  # 详情参见：https://devcenter.heroku.com/articles/
+  # deploying-rails-applications-with-the-puma-web-server#on-worker-boot
+  ActiveRecord::Base.establish_connection
+end
